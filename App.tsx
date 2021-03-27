@@ -1,21 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, { ReactNode, useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { colors } from './colors';
 
-export default function App() {
+const initialTodos = ['do something fun', 'wash dishes'];
+
+export default function App(): ReactNode {
+  const [todos, _setTodos] = useState(initialTodos);
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+      {todos.map((todo) => (
+        <Text key={todo}>{todo}</Text>
+      ))}
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
+    backgroundColor: colors.light,
+    flex: 1,
     justifyContent: 'center',
   },
 });
