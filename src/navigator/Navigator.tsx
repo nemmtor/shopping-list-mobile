@@ -6,7 +6,7 @@ import { HomeScreen, AboutScreen, Screens } from '../screens';
 const Stack = createStackNavigator();
 
 export const Navigator = (): JSX.Element => (
-  <Stack.Navigator>
+  <Stack.Navigator headerMode="none">
     <Stack.Screen
       name={Screens.Home}
       component={HomeScreen}
