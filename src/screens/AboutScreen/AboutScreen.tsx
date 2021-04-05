@@ -1,6 +1,12 @@
 import React from 'react';
 import { Text } from 'react-native';
 
+import { SafeView } from '../../components';
+
 export const AboutScreen = (): JSX.Element => {
-  return <Text>About screen!</Text>;
+  return (
+    <SafeView>
+      <Text>About screen!</Text>
+    </SafeView>
+  );
 };
