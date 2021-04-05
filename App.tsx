@@ -1,11 +1,12 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import { AppProviders } from './providers';
-import { AppStack } from './appstack';
+
+import { AppProviders } from './src/providers';
+import { Navigator } from './src/navigator';
 
 const App = (): JSX.Element => (
   <AppProviders>
-    <AppStack />
+    <Navigator />
   </AppProviders>
 );
 

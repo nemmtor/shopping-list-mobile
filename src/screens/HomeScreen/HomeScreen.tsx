@@ -1,13 +1,11 @@
 import React from 'react';
 import { Text, View, Button } from 'react-native';
-import { StackScreenProps } from '@react-navigation/stack';
 
-import { Screens } from '../appstack/screens.enum';
-import { ScreensParams } from './screens.params';
+import { Screens } from '../screens.enum';
 
-export const HomeScreen = ({
-  navigation,
-}: StackScreenProps<ScreensParams, Screens.Home>): JSX.Element => {
+import { HomeScreenProps } from './HomeScreen.types';
+
+export const HomeScreen = ({ navigation }: HomeScreenProps): JSX.Element => {
   return (
     <View>
       <Text>Home screen!</Text>
