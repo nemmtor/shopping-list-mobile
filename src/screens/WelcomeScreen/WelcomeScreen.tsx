@@ -11,7 +11,7 @@ export const WelcomeScreen = ({
   navigation,
 }: WelcomeScreenProps): JSX.Element => {
   const handleContinue = useCallback(() => {
-    navigation.navigate(Screens.Home);
+    navigation.navigate(Screens.Main);
   }, []);
 
   return (

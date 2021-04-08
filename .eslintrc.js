@@ -19,6 +19,7 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint', 'react-native'],
   rules: {
+    'react/self-closing-comp': 'error',
     '@typescript-eslint/no-unused-vars': [
       'warn',
       {

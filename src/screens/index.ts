@@ -1,4 +1,4 @@
 export { WelcomeScreen } from './WelcomeScreen/WelcomeScreen';
-export { HomeScreen } from './HomeScreen/HomeScreen';
+export { MainNavigationScreen } from './MainNavigationScreen/MainNavigationScreen';
 
 export { Screens } from './screens.enum';

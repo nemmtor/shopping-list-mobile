@@ -1,4 +1,6 @@
 export enum Screens {
   'Welcome' = 'Welcome',
-  'Home' = 'Home',
+  'Main' = 'Main',
+  'MyLists' = 'MyLists',
+  'About' = 'About',
 }

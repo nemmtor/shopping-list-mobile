@@ -1,4 +1,6 @@
 export type ScreensParams = {
   Welcome: undefined;
-  Home: undefined;
+  Main: undefined;
+  MyLists: undefined;
+  About: undefined;
 };
