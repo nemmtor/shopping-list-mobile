@@ -1,9 +1,20 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import { styles } from './AboutScreen.styles';
+import { useBackHandler } from '@react-native-community/hooks';
 
-export const AboutScreen = (): JSX.Element => (
-  <View style={styles.container}>
-    <Text>Project made by Kacper Witas</Text>
-  </View>
-);
+import { styles } from './AboutScreen.styles';
+import { AboutScreenProps } from './AboutScreen.types';
+import { Screens } from '../screens.enum';
+
+export const AboutScreen = ({ navigation }: AboutScreenProps): JSX.Element => {
+  useBackHandler(() => {
+    navigation.replace(Screens.Welcome);
+    return true;
+  });
+
+  return (
+    <View style={styles.container}>
+      <Text>Project made by Kacper Witas</Text>
+    </View>
+  );
+};
