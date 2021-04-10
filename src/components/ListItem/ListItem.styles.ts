@@ -1,11 +1,13 @@
 import { StyleSheet } from 'react-native';
+
 import { getPadding } from '../../helpers';
 
 export const styles = StyleSheet.create({
   container: {
-    paddingTop: 20,
+    elevation: 2,
+    ...getPadding(10, 20),
   },
-  list: {
-    ...getPadding(0, 30),
+  title: {
+    fontSize: 24,
   },
 });

@@ -7,3 +7,12 @@ export type MyListsScreenProps = StackScreenProps<
   ScreensParams,
   Screens.MyLists
 >;
+
+export interface Item {
+  title: string;
+  id: string;
+}
+
+export interface RenderItemProps {
+  item: Item;
+}

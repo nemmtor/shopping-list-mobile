@@ -1,10 +1,17 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { FlatList, View } from 'react-native';
 import { useBackHandler } from '@react-native-community/hooks';
 
-import { styles } from './MyListsScreen.styles';
-import { MyListsScreenProps } from './MyListsScreen.types';
+import { ListItem } from '../../components';
 import { Screens } from '../screens.enum';
+
+import { styles } from './MyListsScreen.styles';
+import { MyListsScreenProps, RenderItemProps } from './MyListsScreen.types';
+import { listsMock } from './lists.mock';
+
+const renderItem = ({ item }: RenderItemProps) => (
+  <ListItem title={item.title} id={item.id} />
+);
 
 export const MyListsScreen = ({
   navigation,
@@ -16,7 +23,12 @@ export const MyListsScreen = ({
 
   return (
     <View style={styles.container}>
-      <Text>Hello world</Text>
+      <FlatList
+        contentContainerStyle={styles.list}
+        data={listsMock}
+        renderItem={renderItem}
+        keyExtractor={(item) => item.id}
+      />
     </View>
   );
 };

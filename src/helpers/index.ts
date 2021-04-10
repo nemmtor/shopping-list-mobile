@@ -1,0 +1,1 @@
+export { getPadding } from './getPadding';
