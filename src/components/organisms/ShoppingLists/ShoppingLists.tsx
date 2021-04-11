@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FlatList } from 'react-native';
 
-import { Item } from '../../molecules';
+import { ShoppingListRenderItem } from '../../molecules';
 
 import { Props, RenderItemProps } from './ShoppingLists.types';
 import { styles } from './ShoppingLists.style';
@@ -9,12 +9,16 @@ import { styles } from './ShoppingLists.style';
 export const ShoppingLists = ({ data }: Props): JSX.Element => {
   const [items, setItems] = useState(data);
 
-  const deleteItem = (idToDelete: string) => () => {
+  const deleteList = (idToDelete: string) => () => {
     setItems((prevItems) => prevItems.filter((item) => item.id !== idToDelete));
   };
 
   const renderItem = ({ item }: RenderItemProps) => (
-    <Item id={item.id} title={item.title} handleDelete={deleteItem(item.id)} />
+    <ShoppingListRenderItem
+      id={item.id}
+      title={item.title}
+      handleDelete={deleteList(item.id)}
+    />
   );
 
   return (

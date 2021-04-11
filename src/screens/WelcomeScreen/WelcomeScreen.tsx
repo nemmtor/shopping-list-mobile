@@ -9,12 +9,12 @@ import { WelcomeScreenProps } from './WelcomeScreen.types';
 export const WelcomeScreen = ({
   navigation,
 }: WelcomeScreenProps): JSX.Element => {
-  const handleContinue = useCallback(() => {
+  const handleNextScreen = useCallback(() => {
     navigation.navigate(Screens.Main);
   }, []);
 
   return (
-    <TouchableOpacity onPress={handleContinue} style={styles.touchableArea}>
+    <TouchableOpacity onPress={handleNextScreen} style={styles.touchableArea}>
       <ImageBackground
         style={styles.bg}
         resizeMode="cover"

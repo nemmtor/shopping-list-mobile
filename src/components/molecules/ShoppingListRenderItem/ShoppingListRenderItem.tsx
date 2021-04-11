@@ -3,10 +3,13 @@ import { TouchableOpacity, View } from 'react-native';
 
 import { ItemContainer, ItemTitle, DeleteButton } from '../../atoms';
 
-import { Props } from './Item.types';
-import { styles } from './Item.styles';
+import { Props } from './ShoppingListRenderItem.types';
+import { styles } from './ShoppingListRenderItem.styles';
 
-export const Item = ({ title, handleDelete }: Props): JSX.Element => {
+export const ShoppingListRenderItem = ({
+  title,
+  handleDelete,
+}: Props): JSX.Element => {
   return (
     <View style={styles.wrapper}>
       <ItemContainer>

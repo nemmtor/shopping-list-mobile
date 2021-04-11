@@ -1,11 +1,12 @@
 import { StyleSheet } from 'react-native';
-import { getPadding } from '../../helpers';
 
 export const styles = StyleSheet.create({
   container: {
+    justifyContent: 'center',
     paddingTop: 20,
   },
-  list: {
-    ...getPadding(0, 30),
+  noListsText: {
+    marginBottom: 20,
+    textAlign: 'center',
   },
 });

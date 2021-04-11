@@ -1,2 +1,1 @@
 export { ShoppingListRenderItem } from './ShoppingListRenderItem';
-export { ProductInput } from './ProductInput';

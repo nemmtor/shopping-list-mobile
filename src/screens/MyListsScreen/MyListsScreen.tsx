@@ -1,5 +1,5 @@
-import React, { useCallback } from 'react';
-import { Button, View } from 'react-native';
+import React, { useCallback, useState } from 'react';
+import { Button, Text, View } from 'react-native';
 import { useBackHandler } from '@react-native-community/hooks';
 
 import { Screens } from '../screens.enum';
@@ -12,6 +12,7 @@ import { ShoppingLists } from '../../components';
 export const MyListsScreen = ({
   navigation,
 }: MyListsScreenProps): JSX.Element => {
+  const [lists, _setLists] = useState(listsMock);
   useBackHandler(() => {
     navigation.replace(Screens.Welcome);
     return true;
@@ -23,7 +24,12 @@ export const MyListsScreen = ({
 
   return (
     <View style={styles.container}>
-      <ShoppingLists data={listsMock} />
+      {lists.length > 0 && <ShoppingLists data={lists} />}
+      {lists.length === 0 && (
+        <Text style={styles.noListsText}>
+          You don&apos;t have any list yet, add one!
+        </Text>
+      )}
       <Button title="Add new list" onPress={handleClick} />
     </View>
   );
