@@ -3,7 +3,7 @@ import { StackScreenProps } from '@react-navigation/stack';
 import { ScreensParams } from '../screens.params';
 import { Screens } from '../screens.enum';
 
-export type MainNavigationScreenProps = StackScreenProps<
+export type NewListScreenProps = StackScreenProps<
   ScreensParams,
-  Screens.Main
+  Screens.Welcome
 >;

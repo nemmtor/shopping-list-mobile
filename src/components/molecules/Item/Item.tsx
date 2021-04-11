@@ -1,17 +1,20 @@
 import React from 'react';
-import { ItemContainer } from '../../atoms/ItemContainer/ItemContainer';
-import { ItemTitle } from '../../atoms/ItemTitle/ItemTitle';
+import { TouchableOpacity, View } from 'react-native';
+
+import { ItemContainer, ItemTitle, DeleteButton } from '../../atoms';
+
 import { Props } from './Item.types';
-import { TouchableOpacity } from 'react-native';
-import { DeleteIcon } from '../../atoms/DeleteIcon/DeleteIcon';
+import { styles } from './Item.styles';
 
 export const Item = ({ title, handleDelete }: Props): JSX.Element => {
   return (
-    <ItemContainer>
-      <ItemTitle title={title} />
-      <TouchableOpacity onPress={handleDelete}>
-        <DeleteIcon />
-      </TouchableOpacity>
-    </ItemContainer>
+    <View style={styles.wrapper}>
+      <ItemContainer>
+        <ItemTitle title={title} />
+        <TouchableOpacity onPress={handleDelete}>
+          <DeleteButton handleClick={handleDelete} />
+        </TouchableOpacity>
+      </ItemContainer>
+    </View>
   );
 };

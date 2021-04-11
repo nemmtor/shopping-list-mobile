@@ -1,13 +1,8 @@
 import 'react-native-gesture-handler';
 import React from 'react';
 
-import { AppProviders } from './src/providers';
-import { Navigator } from './src/Navigator';
+import { MainNavigator } from './src/navigators/MainNavigator';
 
-const App = (): JSX.Element => (
-  <AppProviders>
-    <Navigator />
-  </AppProviders>
-);
+const App = (): JSX.Element => <MainNavigator />;
 
 export default App;

@@ -4,9 +4,11 @@ import { getPadding } from '../../../helpers';
 
 export const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'red',
+    alignItems: 'center',
     borderStyle: 'solid',
-    elevation: 1,
+    elevation: 2,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     ...getPadding(10, 20),
   },
 });
