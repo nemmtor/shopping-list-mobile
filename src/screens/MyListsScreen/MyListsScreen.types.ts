@@ -12,7 +12,3 @@ export interface Item {
   title: string;
   id: string;
 }
-
-export interface RenderItemProps {
-  item: Item;
-}

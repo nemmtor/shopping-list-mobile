@@ -5,5 +5,5 @@ import { Screens } from '../screens.enum';
 
 export type MainNavigationScreenProps = StackScreenProps<
   ScreensParams,
-  Screens.Home
+  Screens.Main
 >;

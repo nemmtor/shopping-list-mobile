@@ -1,2 +1,2 @@
-export { SafeView } from './SafeView/SafeView';
-export { ListItem } from './ListItem/ListItem';
+export { SafeView } from './atoms';
+export { ShoppingLists } from './organisms';
