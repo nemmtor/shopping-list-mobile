@@ -1,7 +1,8 @@
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
-  productWrapper: {
-    marginBottom: 30,
+  text: {
+    color: 'red',
+    fontSize: 14,
   },
 });

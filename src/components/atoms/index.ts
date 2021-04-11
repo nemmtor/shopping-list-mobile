@@ -3,3 +3,4 @@ export { DeleteIcon } from './DeleteIcon';
 export { DeleteButton } from './DeleteButton';
 export { ItemContainer } from './ItemContainer';
 export { ItemTitle } from './ItemTitle';
+export { InputContainer } from './InputContainer';
