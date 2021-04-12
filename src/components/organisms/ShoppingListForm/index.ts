@@ -1,2 +1,1 @@
-export { ShoppingLists } from './ShoppingLists';
 export { ShoppingListForm } from './ShoppingListForm';

@@ -1,2 +1,2 @@
 export { SafeView } from './atoms';
-export { ShoppingLists } from './organisms';
+export { ShoppingLists, ShoppingListForm } from './organisms';

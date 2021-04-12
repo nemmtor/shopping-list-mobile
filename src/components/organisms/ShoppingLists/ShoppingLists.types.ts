@@ -9,4 +9,5 @@ export interface RenderItemProps {
 
 export interface Props {
   data: ShoppingListItem[];
+  handleDelete: (id: string) => void;
 }

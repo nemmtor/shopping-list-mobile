@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    width: '70%',
+    position: 'relative',
     ...getPadding(10),
   },
 });

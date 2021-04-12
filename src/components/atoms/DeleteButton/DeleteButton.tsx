@@ -7,7 +7,7 @@ import { styles } from './DeleteButton.styles';
 export const DeleteButton = ({ handleClick }: Props): JSX.Element => {
   return (
     <TouchableOpacity onPress={handleClick}>
-      <Text style={styles.buttonText}>Usuń</Text>
+      <Text style={styles.buttonText}>Delete</Text>
     </TouchableOpacity>
   );
 };
