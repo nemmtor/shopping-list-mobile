@@ -1,4 +1,7 @@
 export interface Props {
   handleDelete: () => void;
-  error?: string;
+  displayDelete: boolean;
+  error: string;
+  value: string;
+  setValue: (value: string) => void;
 }
