@@ -4,4 +4,5 @@ export type ScreensParams = {
   MyLists: undefined;
   About: undefined;
   NewList: undefined;
+  ListDetails: { listId: string; listTitle: string };
 };

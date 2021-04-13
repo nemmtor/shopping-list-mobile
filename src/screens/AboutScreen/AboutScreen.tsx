@@ -14,7 +14,10 @@ export const AboutScreen = ({ navigation }: AboutScreenProps): JSX.Element => {
 
   return (
     <View style={styles.container}>
-      <Text>Project made by Kacper Witas</Text>
+      <Text style={styles.text}>Project made by Kacper Witas</Text>
+      <Text style={styles.text}>
+        For the purpose of completing the task on WSB University.
+      </Text>
     </View>
   );
 };

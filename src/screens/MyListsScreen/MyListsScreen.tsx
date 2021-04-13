@@ -33,10 +33,18 @@ export const MyListsScreen = ({
     navigation.navigate(Screens.NewList);
   }, [navigation]);
 
+  const handleListClick = (listId: string, listTitle: string) => {
+    navigation.navigate(Screens.ListDetails, { listId, listTitle });
+  };
+
   return (
     <View style={styles.container}>
       {items.length > 0 && (
-        <ShoppingLists data={items} handleDelete={handleDelete} />
+        <ShoppingLists
+          data={items}
+          handleDelete={handleDelete}
+          handleListClick={handleListClick}
+        />
       )}
       {items.length === 0 && (
         <Text style={styles.noListsText}>

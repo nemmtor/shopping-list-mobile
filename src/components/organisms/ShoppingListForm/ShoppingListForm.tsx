@@ -29,6 +29,7 @@ const getTitleError = (title: string) => {
 
 export const ShoppingListForm = ({
   defaultProducts = [{ ...defaultProduct }],
+  handleSuccess,
 }: Props): JSX.Element => {
   const [products, setProducts] = useState(defaultProducts);
   const [title, setTitle] = useState('');
@@ -120,7 +121,11 @@ export const ShoppingListForm = ({
     const productsHasErrors = validateProducts();
     if (productsHasErrors || error) return;
     try {
-      await saveList(title, products);
+      await saveList(
+        title,
+        products.map(({ id, value }) => ({ id, value })),
+      );
+      handleSuccess();
     } catch (e) {
       console.warn(e);
     }

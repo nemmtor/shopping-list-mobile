@@ -13,5 +13,9 @@ export const NewListScreen = ({
     return true;
   });
 
-  return <ShoppingListForm />;
+  const handleSuccess = () => {
+    navigation.replace(Screens.Main);
+  };
+
+  return <ShoppingListForm handleSuccess={handleSuccess} />;
 };

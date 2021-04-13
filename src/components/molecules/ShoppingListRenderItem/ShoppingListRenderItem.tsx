@@ -9,15 +9,23 @@ import { styles } from './ShoppingListRenderItem.styles';
 export const ShoppingListRenderItem = ({
   title,
   handleDelete,
+  handleClick,
+  id,
 }: Props): JSX.Element => {
   return (
-    <View style={styles.wrapper}>
-      <ItemContainer>
-        <ItemTitle title={title} />
-        <TouchableOpacity onPress={handleDelete}>
-          <DeleteButton handleClick={handleDelete} />
-        </TouchableOpacity>
-      </ItemContainer>
-    </View>
+    <TouchableOpacity
+      onPress={() => {
+        handleClick(id, title);
+      }}
+    >
+      <View style={styles.wrapper}>
+        <ItemContainer>
+          <ItemTitle title={title} />
+          <TouchableOpacity onPress={handleDelete}>
+            <DeleteButton handleClick={handleDelete} />
+          </TouchableOpacity>
+        </ItemContainer>
+      </View>
+    </TouchableOpacity>
   );
 };

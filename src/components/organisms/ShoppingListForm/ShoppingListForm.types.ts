@@ -6,4 +6,5 @@ interface Product {
 
 export interface Props {
   defaultProducts?: Product[];
+  handleSuccess: () => void;
 }

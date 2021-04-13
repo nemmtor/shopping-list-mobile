@@ -6,11 +6,16 @@ import { ShoppingListRenderItem } from '../../molecules';
 import { Props, RenderItemProps } from './ShoppingLists.types';
 import { styles } from './ShoppingLists.style';
 
-export const ShoppingLists = ({ data, handleDelete }: Props): JSX.Element => {
+export const ShoppingLists = ({
+  data,
+  handleDelete,
+  handleListClick,
+}: Props): JSX.Element => {
   const renderItem = ({ item }: RenderItemProps) => (
     <ShoppingListRenderItem
       id={item.id}
       title={item.title}
+      handleClick={handleListClick}
       handleDelete={() => {
         handleDelete(item.id);
       }}

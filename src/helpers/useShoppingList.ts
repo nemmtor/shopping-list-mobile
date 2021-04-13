@@ -2,7 +2,12 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import 'react-native-get-random-values';
 import { v4 as uuidv4 } from 'uuid';
 
-interface ShoppingList {
+export interface ListProduct {
+  id: number;
+  value: string;
+}
+
+export interface ShoppingList {
   id: string;
   title: string;
 }
@@ -13,6 +18,7 @@ interface UseShoppingListReturnValue {
   saveList: (title: string, products: any) => Promise<void>;
   getLists: () => Promise<Lists>;
   deleteList: (listId: string) => Promise<void>;
+  getListById: (id: string) => Promise<ListProduct[]>;
 }
 
 export const useShoppingList = (): UseShoppingListReturnValue => {
@@ -23,11 +29,20 @@ export const useShoppingList = (): UseShoppingListReturnValue => {
     return lists;
   };
 
+  const getListById = async (id: string) => {
+    const listString = await AsyncStorage.getItem(id);
+    if (!listString) return;
+
+    const list = JSON.parse(listString);
+    return list;
+  };
+
   const setLists = async (lists: ShoppingList[]) => {
     await AsyncStorage.setItem('lists', JSON.stringify(lists));
   };
 
   const addList = async (listId: string, listData: any) => {
+    console.log('listData: ', listData);
     await AsyncStorage.setItem(listId, JSON.stringify(listData));
   };
 
@@ -46,5 +61,5 @@ export const useShoppingList = (): UseShoppingListReturnValue => {
     await setLists(lists);
   };
 
-  return { saveList, getLists, deleteList };
+  return { saveList, getLists, deleteList, getListById };
 };

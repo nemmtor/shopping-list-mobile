@@ -10,4 +10,5 @@ export interface RenderItemProps {
 export interface Props {
   data: ShoppingListItem[];
   handleDelete: (id: string) => void;
+  handleListClick: (listId: string, listTitle: string) => void;
 }

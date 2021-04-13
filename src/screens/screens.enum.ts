@@ -4,4 +4,5 @@ export enum Screens {
   'MyLists' = 'MyLists',
   'About' = 'About',
   'NewList' = 'NewList',
+  'ListDetails' = 'ListDetails',
 }
